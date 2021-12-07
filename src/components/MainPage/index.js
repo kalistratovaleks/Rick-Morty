@@ -1,30 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Card } from "../Card";
-import { StyledSection, PaginationSection } from "./styled";
+import React from "react";
+import { Link } from "react-router-dom";
+import { StyledSection, MenuDiv } from "./styled";
 
 export const MainPage = () => {
-  const { page } = useParams();
-  const [card, setCard] = useState([]);
-  console.log(page);
-
-  useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
-      .then((res) => res.json())
-      .then((json) => setCard(json.results));
-  }, [page]);
-
   return (
     <div>
-      <PaginationSection>
-        {page !== "1" ? <Link to={`/${+page - 1}`}>Prev</Link> : null}
-        <span>{page}/42</span>
-        {page !== "42" ? <Link to={`/${+page + 1}`}>Next</Link> : null}
-      </PaginationSection>
       <StyledSection>
-        {card.map(({ id, name, image, species }) => (
-          <Card key={id} name={name} image={image} species={species} />
-        ))}
+        <Link to={`/characters/1`}>
+          <MenuDiv>
+            <img
+              src="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/02/Rick-And-Morty-Characters-Cropped.jpg"
+              alt="characters"
+            />
+            <h2>CHARACTERS</h2>
+          </MenuDiv>
+        </Link>
+        <Link to={`/location/1`}>
+          <MenuDiv>
+            <img
+              src="https://i.ytimg.com/vi/-Z3yNCYgWr0/maxresdefault.jpg"
+              alt="locations"
+            />
+            <h2>LOCATIONS</h2>
+          </MenuDiv>
+        </Link>
+        <Link to={`/episode/1`}>
+          <MenuDiv>
+            <img src="http://i.imgur.com/nsn3NLU.jpg" alt="episodes" />
+            <h2>EPISODES</h2>
+          </MenuDiv>
+        </Link>
       </StyledSection>
     </div>
   );

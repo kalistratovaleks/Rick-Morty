@@ -10,6 +10,7 @@ function App() {
     <div>
       <Header />
       <Routes>
+        <Route path="/" element={<MainPage />} />
         <Route path="/characters/:page" element={<CharactersPage />} />
         <Route path="/location/:page" element={<LocationPage />} />
         <Route path="/episode/:page" element={<EpisodePage />} />

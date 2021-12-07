@@ -5,8 +5,22 @@ export const StyledSection = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: gray;
+  padding: 11% 0;
 `;
-export const PaginationSection = styled.div`
+
+export const MenuDiv = styled.div`
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  border-radius: 15px;
   text-align: center;
-  background-color: gray;
+  & > img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  & > h2 {
+    color: limegreen;
+  }
 `;

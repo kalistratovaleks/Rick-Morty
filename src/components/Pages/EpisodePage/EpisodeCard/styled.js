@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
-  width: 60%;
+  width: 40%;
   background-color: black;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  margin-top: 20px;
+  margin: 20px 20px 0 0;
   color: white;
-  margin: 0 auto;
   padding: 0 10px;
+  & > h1 {
+    margin: 0;
+  }
 `;
