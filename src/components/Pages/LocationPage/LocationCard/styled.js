@@ -8,4 +8,5 @@ export const StyledCard = styled.div`
   text-align: center;
   border-radius: 30px;
   margin-top: 15px;
+  padding: 15px;
 `;

@@ -27,7 +27,7 @@ export const CharactersPage = () => {
       </PaginationSection>
       <StyledSection>
         {card.map(({ id, name, image, species }) => (
-          <Card key={id} name={name} image={image} species={species} />
+          <Card key={id} id={id} name={name} image={image} species={species} />
         ))}
       </StyledSection>
     </div>

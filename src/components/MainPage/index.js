@@ -26,7 +26,10 @@ export const MainPage = () => {
         </Link>
         <Link to={`/episode/1`}>
           <MenuDiv>
-            <img src="http://i.imgur.com/nsn3NLU.jpg" alt="episodes" />
+            <img
+              src="https://assets3.thrillist.com/v1/image/1874782/1584x870/scale;webp=auto;jpeg_quality=60;progressive.jpg"
+              alt="episodes"
+            />
             <h2>EPISODES</h2>
           </MenuDiv>
         </Link>

@@ -20,8 +20,13 @@ export const LocationPage = () => {
         {page !== "7" ? <Link to={`/location/${+page + 1}`}>Next</Link> : null}
       </PaginationSection>
       <StyledSection>
-        {location.map(({ id, name, type }) => (
-          <LocationCard key={id} name={name} type={type} />
+        {location.map(({ id, name, type, dimension }) => (
+          <LocationCard
+            key={id}
+            name={name}
+            type={type}
+            dimension={dimension}
+          />
         ))}
         <EmptyCard />
         <EmptyCard />

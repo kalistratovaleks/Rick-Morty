@@ -18,4 +18,15 @@ export const StyledCardSection = styled.div`
 export const CardInformation = styled.div`
   width: 100%;
   text-align: center;
+  & > a {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  & > a:hover {
+    color: yellow;
+  }
+`;
+export const AboutSpan = styled.span`
+  display: block;
 `;
